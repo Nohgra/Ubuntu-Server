@@ -10,8 +10,9 @@ This project contains information about the ubuntu server hosted by me and its c
 
 ### How to access
 
-IP address				54.93.243.128
-URL						http://ec2-54-93-243-128.eu-central-1.compute.amazonaws.com/
+IP address:				54.93.243.128
+SSH port: 				2200
+URL:					http://ec2-54-93-243-128.eu-central-1.compute.amazonaws.com/
 
 1. Download private key:
 Get the private key supported in the instructor notes and save it to the ~/.ssh directory as, for example, 'lightsail'.
@@ -20,6 +21,12 @@ In your terminal type 'ssh -i ~/.ssh/lightsail -p 2200 grader@54.93.243.128' to 
 3. Enter PW:
 The password for the private key is 'SEE INSTRUCTOR NOTES'.
 
+### Installed software
+
+- Pip
+- Virtualenv
+- Apache2
+- PostgreSQL
 
 ### Third-party resources
 
