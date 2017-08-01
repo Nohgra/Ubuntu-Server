@@ -17,7 +17,7 @@ This project contains information about the ubuntu server hosted by me and its c
 ### 1. Download private key:
 Get the private key supported in the instructor notes and save it to the ~/.ssh directory as, for example, 'lightsail'.
 ### 2. Connect via ssh:
-In your terminal type 'ssh -i ~/.ssh/lightsail -p 2200 grader@54.93.243.128' to access the server via ssh on port 2200 as the user 'grader'.
+In your terminal type ```ssh -i ~/.ssh/lightsail -p 2200 grader@54.93.243.128``` to access the server via ssh on port 2200 as the user 'grader'.
 ### 3. Enter PW:
 The password for the private key is 'SEE INSTRUCTOR NOTES'.
 
@@ -44,7 +44,7 @@ $ sudo adduser grader
 $ sudo nano
 $ sudo nano /etc/sudoers.d/grader
 ```
-- add '''grader ALL=(ALL:ALL) ALL'''
+- add ```grader ALL=(ALL:ALL) ALL```
 
 ### Set SSH login via Key
 - Generate public and private key on local machine via ```ssh-keygen```, save to ~/.ssh
@@ -54,8 +54,10 @@ $ su - grader
 $ mkdir .ssh
 $ touch .ssh/authorized_keys
 $ nano .ssh/authorized_keys
+```
 - Copy in the content of the newly created public key
 - Change permissions:
+```
 $ chmod 700 .ssh
 $ chmod 644 .ssh/authorized_keys
 ```
@@ -101,6 +103,9 @@ $ sudo ufw enable
 $ sudo apt-get install postgresql
 $ sudo su - postgres
 $ psql
+```
+Create Database and user:
+```
 postgres=# CREATE DATABASE catalog;
 postgres=# CREATE USER catalog;
 postgres=# ALTER ROLE catalog WITH PASSWORD 'YOUR PASSWORD';
